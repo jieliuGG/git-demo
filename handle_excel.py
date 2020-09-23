@@ -33,5 +33,13 @@ class HandleExcel:
             sub_data['expected'] = sheet.cell(i,4)
             test_data.append(sub_data)
         return test_data # 返回获取到的数据
+
+    @staticmethod
+    def write_back(filename, sheet_name, row, rol, result):
+        '''专门写回数据'''
+        wb = load_workbook(filename)
+        sheet = wb(sheet_name)
+        sheet.cell(row, rol).value = result
+        wb.save(filename)  # 保存结果
 if __name__=='__main__':
     print(HandleExcel('test_data.xlsx','login').get_data())
