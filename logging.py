@@ -5,6 +5,7 @@
 # @Email:   810030907@qq.com
 # @File:    logging.py
 import logging
+
 # 1. 定义一个日志收集器 logger
 logger = logging.getLogger('logging_review')
 
@@ -19,7 +20,7 @@ ch = logging.StreamHandler()
 ch.setLevel('ERROR')
 ch.setFormatter(formater)
 
-fh = logging.FileHandler('logging_review.txt',encoding='utf-8')
+fh = logging.FileHandler('logging_review.txt', encoding='utf-8')
 fh.setLevel('DEBUG')
 fh.setFormatter(formater)
 

@@ -1,4 +1,3 @@
-
 1)登录url = 'http://119.23.241.154.8080/futureloan/mvc/api/member/login'
 2)充值url: url =  'http://119.23.241.154.8080/futureloan/mvc/api/member/recharge'
 3)针对登录接口写四个用例：正常登录、不输入密码、不输入账号、输入错误的密码
@@ -34,3 +33,9 @@ section option value
 
 类方法cls、静态方法：不能调用类属性值
 实例方法self：只有实例方法才可以调用类属性值 self
+
+
+
+
+
+Test_HttprequestDemo第一次上传失误，重新上传，更名为Test_HttprequestDemo02

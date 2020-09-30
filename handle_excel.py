@@ -16,23 +16,27 @@
 
 
 from openpyxl import load_workbook
+
+
 class HandleExcel:
     '''一次性读取所有数据，对内存要求高点'''
-    def __init__(self,filename,sheet_name):
+
+    def __init__(self, filename, sheet_name):
         self.filename = filename
         self.sheet_name = sheet_name
+
     def get_data(self):
-        wb= load_workbook(self.filename)
+        wb = load_workbook(self.filename)
         sheet = wb[self.sheet_name]
         test_data = []
-        for i in range(1,sheet.max_row+1):
+        for i in range(1, sheet.max_row + 1):
             sub_data = []
-            sub_data['method'] = sheet.cell(i,1).value
-            sub_data['url'] = sheet.cell(i,2).value
-            sub_data['data'] = sheet.cell(i,3).value
-            sub_data['expected'] = sheet.cell(i,4)
+            sub_data['method'] = sheet.cell(i, 1).value
+            sub_data['url'] = sheet.cell(i, 2).value
+            sub_data['data'] = sheet.cell(i, 3).value
+            sub_data['expected'] = sheet.cell(i, 4)
             test_data.append(sub_data)
-        return test_data # 返回获取到的数据
+        return test_data  # 返回获取到的数据
 
     @staticmethod
     def write_back(filename, sheet_name, row, rol, result):
@@ -41,5 +45,7 @@ class HandleExcel:
         sheet = wb(sheet_name)
         sheet.cell(row, rol).value = result
         wb.save(filename)  # 保存结果
-if __name__=='__main__':
-    print(HandleExcel('test_data.xlsx','login').get_data())
+
+
+if __name__ == '__main__':
+    print(HandleExcel('test_data.xlsx', 'login').get_data())

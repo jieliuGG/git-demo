@@ -3,7 +3,7 @@
 # @IDE:     Test_HttprequestDemo
 # @Author:  jsonJie
 # @Email:   810030907@qq.com
-# @File:    file_up.py
+# @File:    fileUp.py
 # pip install pypiwin32
 import win32gui
 import win32con

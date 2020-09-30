@@ -3,7 +3,7 @@
 # @IDE:     Test_HttprequestDemo
 # @Author:  jsonJie
 # @Email:   810030907@qq.com
-# @File:    http_request.py
+# @File:    http_requests.py
 import requests
 
 

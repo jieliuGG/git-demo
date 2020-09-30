@@ -6,11 +6,11 @@
 # @File:    test_suite.py
 
 import unittest
-from test_http_request  import TestHttpRequest#模块名
+from test_http_request import TestHttpRequest  # 模块名
 import test_http_request
 import HTMLTestRunner
 
-suite=unittest.TestSuite()
+suite = unittest.TestSuite()
 # 加载方式1：
 suite.addTest(TestHttpRequest("test_login_normal"))
 suite.addTest(TestHttpRequest("test_login_Nopwd"))
@@ -23,10 +23,9 @@ loader = unittest.TestLoader()
 suite.addTest(loader.loadTestsFromModule(test_http_request))
 
 # 执行用例
-with open('test_summer.html','wb') as file:
+with open('test_summer.html', 'wb') as file:
     runner = HTMLTestRunner.HTMLTestRunner(stream=file, verbosity=2, title=None, description=None)
     runner.run(suite)
 
 # runner = unittest.TextTestRunner()
 # runner.run()
-

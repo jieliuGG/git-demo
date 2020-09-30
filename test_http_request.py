@@ -5,7 +5,7 @@
 # @Email:   810030907@qq.com
 # @File:    test_http_request.py
 import unittest
-from http_request import HttpRequest
+from http_requests import HttpRequest
 from get_data import GetDate
 test_data = []
 class TestHttpRequest(unittest.TestCase):
